@@ -1,0 +1,376 @@
+/* ---------------------------------------------------------------
+   Fixture Room — token system
+   Color:  pitch-dark #0E1712 (bg) · surface #17251C (cards)
+           chalk #EDE9DE (text) · gold #C9A227 (home / accent)
+           rust #B5502F (away / alert) · mist #8A9C8F (draw / muted)
+   Type:   Fraunces (headings) · Work Sans (UI/body) · IBM Plex Mono (numbers)
+   Layout: left-aligned editorial column, cards with a left accent
+           stripe instead of drop shadows, flat surfaces, thin rules.
+------------------------------------------------------------------ */
+
+:root {
+  --pitch-dark: #0E1712;
+  --surface: #17251C;
+  --surface-raised: #1D2D22;
+  --chalk: #EDE9DE;
+  --chalk-dim: #B7BEB2;
+  --gold: #C9A227;
+  --rust: #C1633E;
+  --mist: #8A9C8F;
+  --line: #2A3A2F;
+  --radius: 3px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--pitch-dark);
+  color: var(--chalk);
+  font-family: "Work Sans", -apple-system, sans-serif;
+  line-height: 1.5;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+a { color: inherit; }
+
+.frame {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* ---- masthead ---- */
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding: 36px 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.masthead-title { display: flex; flex-direction: column; gap: 4px; }
+
+.wordmark {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  text-decoration: none;
+  color: var(--chalk);
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  color: var(--mist);
+  font-style: italic;
+  font-family: "Fraunces", serif;
+}
+
+.masthead-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.92rem;
+}
+
+.masthead-nav a {
+  text-decoration: none;
+  color: var(--chalk-dim);
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+.masthead-nav a.active,
+.masthead-nav a:hover { color: var(--chalk); border-bottom-color: var(--gold); }
+
+.update-btn {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--gold);
+  color: #211A05;
+  border: none;
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.update-btn:hover { filter: brightness(1.08); }
+.update-btn:disabled { opacity: 0.6; cursor: progress; }
+
+.update-banner {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  font-size: 0.88rem;
+  color: var(--chalk-dim);
+}
+.update-banner.error { border-color: var(--rust); color: var(--rust); }/* ---- status / league tabs ---- */
+
+.status-line {
+  margin-top: 22px;
+  font-size: 0.82rem;
+  color: var(--mist);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.league-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 18px 0 30px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.league-tabs a {
+  text-decoration: none;
+  font-size: 0.88rem;
+  color: var(--chalk-dim);
+}
+
+.league-tabs a.active { color: var(--gold); }
+
+/* ---- value panel ---- */
+
+.value-panel {
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 34px;
+  background: linear-gradient(180deg, rgba(201,162,39,0.08), transparent);
+}
+
+.value-panel h2 {
+  margin: 0 0 6px;
+  font-family: "Fraunces", serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.value-note { color: var(--chalk-dim); font-size: 0.85rem; margin: 0 0 14px; }
+
+.value-grid { display: flex; flex-direction: column; gap: 8px; }
+
+.value-chip {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.88rem;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.value-chip a { text-decoration: none; border-bottom: 1px dotted var(--mist); }
+
+.value-side {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+/* ---- date groups & fixture cards ---- */
+
+.date-heading {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 0 0 14px;
+  color: var(--chalk);
+}
+
+.date-group { margin-bottom: 38px; }
+
+.fixture-list { display: flex; flex-direction: column; gap: 12px; }
+
+.fixture-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+}
+
+.fixture-card.has-value { border-left-color: var(--gold); }
+
+.fixture-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--mist);
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 8px;
+}
+
+.teams-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.team-name { text-decoration: none; font-weight: 600; }
+.team-name:hover { color: var(--gold); }
+.vs { color: var(--mist); font-size: 0.8rem; }
+
+.prob-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--line);
+  margin-bottom: 6px;
+}
+
+.prob-home { background: var(--gold); }
+.prob-draw { background: var(--mist); }
+.prob-away { background: var(--rust); }
+
+.prob-labels {
+  display: flex;
+  gap: 16px;
+  font-size: 0.75rem;
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--chalk-dim);
+  margin-bottom: 10px;
+}
+
+.fixture-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  font-size: 0.78rem;
+  color: var(--chalk-dim);
+}
+
+.fixture-meta strong { color: var(--chalk); }
+
+.value-flag {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: var(--gold);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.empty-state, .empty-note {
+  color: var(--mist);
+  font-size: 0.92rem;
+  padding: 20px 0;
+}
+
+/* ---- team page ---- */
+
+.back-link {
+  display: inline-block;
+  margin-top: 28px;
+  font-size: 0.85rem;
+  color: var(--mist);
+  text-decoration: none;
+}
+
+.team-heading {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  margin: 10px 0 30px;
+}
+
+.team-section { margin-bottom: 38px; }
+.team-section h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+/* ---- tables ---- */
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.results-table th {
+  text-align: left;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-size: 0.72rem;
+  color: var(--mist);
+  text-transform: lowercase;
+  padding: 6px 10px 6px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.results-table td {
+  padding: 8px 10px 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.score-cell { font-family: "IBM Plex Mono", monospace; }
+
+.history-table .hit-row .hit-mark { color: var(--gold); }
+.history-table .miss-row .hit-mark { color: var(--rust); }
+.hit-mark { font-family: "IBM Plex Mono", monospace; font-size: 1rem; }
+
+/* ---- accuracy panel ---- */
+
+.page-heading {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  margin: 30px 0 24px;
+}
+
+.accuracy-panel {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
+}
+
+.accuracy-number {
+  font-family: "Fraunces", serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.accuracy-label {
+  font-size: 0.88rem;
+  color: var(--chalk-dim);
+  max-width: 46ch;
+}
+
+/* ---- footer ---- */
+
+.foot-note {
+  margin-top: 60px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 0.75rem;
+  color: var(--mist);
+}
+
+/* ---- responsive ---- */
+
+@media (max-width: 560px) {
+  .masthead { flex-direction: column; align-items: flex-start; }
+  .accuracy-panel { flex-direction: column; gap: 6px; }
+  .history-table { font-size: 0.78rem; }
+}

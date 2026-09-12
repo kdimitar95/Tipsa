@@ -1,0 +1,16 @@
+{
+  "generated_at": null,
+  "last_update": null,
+  "leagues": {
+    "PL": "Premier League",
+    "PD": "La Liga",
+    "BL1": "Bundesliga",
+    "SA": "Serie A",
+    "FL1": "Ligue 1",
+    "CL": "Champions League"
+  },
+  "upcoming": [],
+  "history": [],
+  "recent_matches": [],
+  "accuracy": null
+}
