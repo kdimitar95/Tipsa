@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-01T12:01:30.826102+00:00",
+  "generated_at": "2026-10-02T11:33:11.225096+00:00",
   "last_update": {
-    "id": 20,
-    "ran_at": "2026-10-01 12:01:30",
+    "id": 21,
+    "ran_at": "2026-10-02 11:33:11",
     "leagues": "PL,PD,BL1,SA,FL1,CL",
     "matches_fetched": 268,
-    "predictions_made": 0,
+    "predictions_made": 3,
     "notes": ""
   },
   "leagues": {
@@ -16,7 +16,71 @@
     "FL1": "Ligue 1",
     "CL": "Champions League"
   },
-  "upcoming": [],
+  "upcoming": [
+    {
+      "match_id": 565820,
+      "competition_code": "BL1",
+      "competition_name": "Bundesliga",
+      "home_team": "Borussia Dortmund",
+      "away_team": "SV Werder Bremen",
+      "utc_date": "2026-10-09T18:30:00Z",
+      "home_win_prob": 0.7268,
+      "draw_prob": 0.1634,
+      "away_win_prob": 0.1098,
+      "expected_home_goals": 2.46,
+      "expected_away_goals": 0.85,
+      "best_scoreline": "2-0",
+      "over_2_5_prob": 0.6426,
+      "btts_prob": 0.524,
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "value_side": null,
+      "value_edge": null
+    },
+    {
+      "match_id": 559669,
+      "competition_code": "FL1",
+      "competition_name": "Ligue 1",
+      "home_team": "Racing Club de Lens",
+      "away_team": "Olympique Lyonnais",
+      "utc_date": "2026-10-09T18:45:00Z",
+      "home_win_prob": 0.3626,
+      "draw_prob": 0.2698,
+      "away_win_prob": 0.3677,
+      "expected_home_goals": 1.25,
+      "expected_away_goals": 1.26,
+      "best_scoreline": "1-1",
+      "over_2_5_prob": 0.4574,
+      "btts_prob": 0.51,
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "value_side": null,
+      "value_edge": null
+    },
+    {
+      "match_id": 564706,
+      "competition_code": "PD",
+      "competition_name": "La Liga",
+      "home_team": "M\u00e1laga CF",
+      "away_team": "RCD Espanyol de Barcelona",
+      "utc_date": "2026-10-09T19:00:00Z",
+      "home_win_prob": 0.3197,
+      "draw_prob": 0.27,
+      "away_win_prob": 0.4103,
+      "expected_home_goals": 1.14,
+      "expected_away_goals": 1.33,
+      "best_scoreline": "1-1",
+      "over_2_5_prob": 0.4503,
+      "btts_prob": 0.5017,
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "value_side": null,
+      "value_edge": null
+    }
+  ],
   "history": [
     {
       "match_id": 564689,
