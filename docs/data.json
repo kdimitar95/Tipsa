@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-12T14:12:39.477760+00:00",
+  "generated_at": "2026-11-13T13:36:52.566060+00:00",
   "last_update": {
-    "id": 62,
-    "ran_at": "2026-11-12 14:12:39",
+    "id": 63,
+    "ran_at": "2026-11-13 13:36:52",
     "leagues": "PL,PD,BL1,SA,FL1,CL",
     "matches_fetched": 572,
-    "predictions_made": 0,
+    "predictions_made": 3,
     "notes": ""
   },
   "leagues": {
@@ -16,7 +16,71 @@
     "FL1": "Ligue 1",
     "CL": "Champions League"
   },
-  "upcoming": [],
+  "upcoming": [
+    {
+      "match_id": 565859,
+      "competition_code": "BL1",
+      "competition_name": "Bundesliga",
+      "home_team": "FC Bayern M\u00fcnchen",
+      "away_team": "1. FC K\u00f6ln",
+      "utc_date": "2026-11-20T19:30:00Z",
+      "home_win_prob": 0.8407,
+      "draw_prob": 0.0986,
+      "away_win_prob": 0.0607,
+      "expected_home_goals": 3.46,
+      "expected_away_goals": 0.92,
+      "best_scoreline": "3-0",
+      "over_2_5_prob": 0.8025,
+      "btts_prob": 0.5751,
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "value_side": null,
+      "value_edge": null
+    },
+    {
+      "match_id": 559622,
+      "competition_code": "FL1",
+      "competition_name": "Ligue 1",
+      "home_team": "ES Troyes AC",
+      "away_team": "Le Havre AC",
+      "utc_date": "2026-11-20T19:45:00Z",
+      "home_win_prob": 0.3064,
+      "draw_prob": 0.22,
+      "away_win_prob": 0.4737,
+      "expected_home_goals": 1.52,
+      "expected_away_goals": 1.93,
+      "best_scoreline": "1-1",
+      "over_2_5_prob": 0.6705,
+      "btts_prob": 0.6685,
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "value_side": null,
+      "value_edge": null
+    },
+    {
+      "match_id": 564748,
+      "competition_code": "PD",
+      "competition_name": "La Liga",
+      "home_team": "Athletic Club",
+      "away_team": "RCD Espanyol de Barcelona",
+      "utc_date": "2026-11-20T20:00:00Z",
+      "home_win_prob": 0.4863,
+      "draw_prob": 0.2652,
+      "away_win_prob": 0.2485,
+      "expected_home_goals": 1.46,
+      "expected_away_goals": 0.96,
+      "best_scoreline": "1-0",
+      "over_2_5_prob": 0.4339,
+      "btts_prob": 0.4726,
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "value_side": null,
+      "value_edge": null
+    }
+  ],
   "history": [
     {
       "match_id": 564746,
